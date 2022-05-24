@@ -1,19 +1,22 @@
-#mariadb default username：root  password：123456
+# image: https://hub.docker.com/_/mariadb
 
 version: '3.8'
 services:
   mariadb:
-    container_name: ${APP_CONTAINER_NAME}
-    image: mariadb:${DB_MARIADB_VERSION}
-    environment:
-     - MYSQL_ROOT_PASSWORD=${DB_MARIADB_PASSWORD}
-    ports:
-     - ${DB_MARIADB_PORT}:3306
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    image: $APP_REPO:$APP_VERSION
+    container_name: $APP_NAME
     restart: always
+    environment:
+     - MARIADB_ROOT_PASSWORD=$APP_PASSWORD
+    ports:
+     - $APP_PORT:3306
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-     - "${VOLUMES_PATH_PREFIX}/mysql_data:/var/lib/mysql"
+     - mariadb:/var/lib/mysql
 
 networks:
   default:
-      name: "${APP_NETWORK}"
+      name: $APP_NAME
+
+volumes:
+  mariadb:

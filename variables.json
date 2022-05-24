@@ -1,7 +1,7 @@
 {
   "name": "mariadb",
   "trademark": "MariaDB",
-  "installpath": "/data/db/mariadb",
+  "installpath": "/data/apps/mariadb",
   "compose_file": "docker-compose.yml",
   "env_file": ".env",
   "fork_url": "https://github.com/MariaDB/mariadb-docker",
@@ -12,15 +12,5 @@
     "disk": "20",
     "swap": "2",
     "url": "https://mariadb.org/documentation/"
-  },
-
-  "services":[
-    {
-      "name": "mariadb",
-      "port": "3306",
-      "description_cn": "TCP 访问MariaDB数据库",
-      "description_en": "Accessing MySQL database with TCP",
-      "required": "Y"
-    }
-  ]
+  }
 }
