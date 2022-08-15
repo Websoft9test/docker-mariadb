@@ -1,0 +1,6 @@
+[mysqld]
+general-log-file=/var/log/mysql/mysql.log
+log_error=/var/log/mysql/error.log
+#general-log=0
+#server-id=1
+#log_bin=/var/log/mysql/mysql-bin.log
