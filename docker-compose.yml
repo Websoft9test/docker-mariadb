@@ -13,7 +13,7 @@ services:
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
      - mariadb:/var/lib/mysql
-
+     - mariadb_conf:/etc/mysql/conf.d
 networks:
   default:
     name: ${APP_NETWORK}
@@ -21,3 +21,4 @@ networks:
 
 volumes:
   mariadb:
+  mariadb_conf:
