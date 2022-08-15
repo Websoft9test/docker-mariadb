@@ -1,6 +1,14 @@
 [mysqld]
-general-log-file=/var/log/mysql/mysql.log
-log_error=/var/log/mysql/error.log
+
+#log_error=/var/log/mysql/error.log
+
 #general-log=0
-#server-id=1
+#general-log-file=/var/log/mysql/mysql.log
+
+#log_bin=mysql-bin
 #log_bin=/var/log/mysql/mysql-bin.log
+
+#slow_query_log_file=/var/log/mysql/mysql-slow.log
+#long_query_time=10
+
+#server-id=1
