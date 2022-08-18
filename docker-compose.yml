@@ -8,6 +8,7 @@ services:
     restart: always
     environment:
      - MARIADB_ROOT_PASSWORD=$APP_PASSWORD
+     - MYSQL_ROOT_PASSWORD=$APP_PASSWORD
     ports:
      - $APP_PORT:3306
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
